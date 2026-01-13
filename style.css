@@ -1,0 +1,126 @@
+/* ================= GLOBAL RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BASE STYLES ================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #222;
+    background-image: url('images/455056.jpg'); /* path to image */
+    background-size: cover;           /* cover entire viewport */
+    background-position: center;      /* center the image */
+    background-repeat: no-repeat;     /* don't tile */
+    background-attachment: fixed;     /* fixed when scrolling */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* white overlay with 70% opacity */
+    pointer-events: none; /* allow clicks through overlay */
+    z-index: -1; /* behind content */
+}
+
+/* Center content and limit width */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ================= HEADINGS ================= */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+h3 {
+    margin-bottom: 8px;
+}
+
+/* ================= HERO SECTION ================= */
+section:first-of-type {
+    background-color: #222121;
+    color: #fff;
+    border-radius: 8px;
+}
+
+section:first-of-type p {
+    margin-bottom: 10px;
+}
+
+/* ================= SKILLS ================= */
+ul {
+    list-style: none;
+}
+
+li {
+    background-color: #fff;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ================= PROJECTS ================= */
+section div {
+    margin-bottom: 25px;
+}
+
+section img {
+    display: block;
+    margin-top: 10px;
+    border-radius: 6px;
+    max-width: 100%;
+}
+
+/* Group ATM images */
+section div div {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ================= CONTACT ================= */
+#contact p {
+    margin-bottom: 8px;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container that holds both console images */
+section div div {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center; /* vertically center images */
+}
+
+/* Make console images same height */
+section div div img {
+    height: 300px;      /* pick a fixed height */
+    width: auto;        /* width adjust automatically */
+    border-radius: 6px;
+    object-fit: contain; /* keep aspect ratio without cropping */
+}
+
