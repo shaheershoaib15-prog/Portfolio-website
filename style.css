@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #222;
-    background-image: url('images/455056.jpg'); /* path to image */
+    background-image: url('images/bg.jpg'); /* path to image */
     background-size: cover;           /* cover entire viewport */
     background-position: center;      /* center the image */
     background-repeat: no-repeat;     /* don't tile */
